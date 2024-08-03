@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+
+</head>
+<body>
+  <div id="app">
+    <div class="timer">
+    <section id="timer" class="flex">
+      <span id="minutes">25</span>
+      <span>:</span>
+      <span id="seconds">00</span>
+
+    </section>
+    <section id="controls" class="flex">
+      <button 
+        data-action="toggleRunning"
+        class="ph ph-play-circle">
+          <span class="sr-only">Iniciar</span>
+      </button>
+
+      <button 
+        data-action="toggleRunning"
+        class="ph ph-stop-circle">
+          <span class="sr-only">Parar</span>
+      </button>
+
+      <button 
+        data-action="increaseTime"
+        class="ph ph-plus-circle">
+          <span class="sr-only">Aumentar</span>
+      </button>
+
+      <button 
+        data-action="decreaseTime"
+        class="ph ph-minus-circle">
+          <span class="sr-only">Diminuir</span>
+      </button>
+  </section>
+</div>
+
+  <aside>
+    <div class="sounds">
+    <button 
+        data-action="sound-play"
+        data-sound="sound-1"
+        class="ph ph-grains">
+          <span class="sr-only">Som de Floresta</span>
+      </button>
+      <button 
+        data-action="sound-play"
+        data-sound="sound-2"
+        class="ph ph-cloud-snow">
+          <span class="sr-only">Som de chuva</span>
+      </button>
+      <button 
+        data-action="sound-play"
+        data-sound="sound-3"
+        class="ph ph-coffee">
+          <span class="sr-only">Som de cafeteria</span>
+      </button>
+      <button 
+        data-action="sound-play"
+        data-sound="sound-4"
+        class="ph ph-fire">
+          <span class="sr-only">Som de lareira</span>
+      </button>
+    </div>
+  </aside>
+
+  <audio id="sound-1" src="./assets/Floresta.wav"></audio>
+  <audio id="sound-2" src="./assets/Chuva.wav"></audio>
+  <audio id="sound-3" src="./assets/Cafeteria.wav"></audio>
+  <audio id="sound-4" src="./assets/Lareira.wav"></audio>
+
+</div>        
+</body>
+</html>
